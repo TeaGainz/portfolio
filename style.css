@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: #fdfdfd;
+    --bg-color: #FFF5EE;
     --text-color: #333;
     --main-color: #d1a153;
-    --white-color: #fdfdfd;
+    --white-color: #FFF5EE;
     --shadow-color: rgba(0, 0, 0, .2);
 }
 
@@ -26,7 +26,7 @@
 
 .dark-mode {
     --bg-color: #0b061f;
-    --text-color: #fdfdfd;
+    --text-color: #FFF5EE;
     --shadow-color: rgba(0, 0, 0, .7);
 }
 
@@ -46,7 +46,13 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem 7%;
-    background: transparent;
+    /* Change from background: transparent; to: */
+    background: var(--bg-color);
+    /* Add slight transparency */
+    opacity: 0.95;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 .1rem 1rem var(--shadow-color);
     display: flex;
     align-items: center;
     z-index: 100;
@@ -55,7 +61,7 @@ body {
 
 .header.sticky {
     background: var(--bg-color);
-    box-shadow: 0 .1rem 1rem var(--shadow-color);
+    opacity: 0.95;
 }
 
 .logo {
@@ -68,14 +74,13 @@ body {
 .navbar a {
     position: relative;
     font-size: 1.7rem;
-    color: var(--white-color);
+    color: var(--text-color);  /* Change from var(--white-color) */
     font-weight: 500;
     margin-right: 3.5rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.header.sticky .navbar a {
-    color: var(--text-color);
-}
+
 
 .header.sticky .navbar a.active {
     color: var(--main-color);
@@ -98,7 +103,7 @@ body {
 
 #darkMode-icon {
     font-size: 2.4rem;
-    color: var(--white-color);
+    color: var(--text-color);
     cursor: pointer;
 }
 
