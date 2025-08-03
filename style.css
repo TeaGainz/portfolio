@@ -625,6 +625,95 @@ span {
     color: #333;
 }
 
+/* Certificates Showcase */
+.certificates-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.certificate-card {
+  background: var(--bg-color);
+  border-radius: 1.5rem;
+  box-shadow: 0 0.2rem 1rem var(--shadow-color);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 440px;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.certificate-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0.5rem 2rem var(--main-color);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: none;
+}
+
+.certificate-info {
+  padding: 1rem 0.5rem;
+  background: var(--main-color);
+  color: var(--white-color);
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.certificate-info h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.certificate-info p {
+  margin: 0.5rem 0 0;
+  font-size: 1.3rem;
+}
+
+/* Modal Styles */
+.certificate-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.certificate-modal .close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.certificate-modal .modal-content {
+  max-width: 90vw;
+  max-height: 70vh;
+  margin: auto;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 2rem var(--main-color);
+  display: block;
+}
+
+#modalCaption {
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+}
 
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
