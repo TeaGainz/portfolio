@@ -40,6 +40,10 @@ body {
     color: var(--text-color);
 }
 
+.highlight {
+  color: var(--text-color);
+}
+
 .header {
     position: fixed;
     top: 0;
